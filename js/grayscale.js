@@ -165,11 +165,15 @@ function init() {
     var mapElement = document.getElementById('map');
 
     // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
+    var map = new google.maps.Map(mapElement, {
+        center: {lat: 37.463850, lng: 126.958982},
+        zoom: 15
+    
+    });
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
+    var myLatLng = new google.maps.LatLng(37.463850, 126.958982);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
